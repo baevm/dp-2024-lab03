@@ -7,7 +7,7 @@ public interface IMessage
 
 public class Message : IMessage
 {
-    public string Text;
+    private string Text;
 
     public Message(string text)
     {

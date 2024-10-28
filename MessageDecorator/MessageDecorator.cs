@@ -2,7 +2,7 @@ namespace MessageDecorator;
 
 public abstract class MessageDecorator : IMessage
 {
-    public IMessage _message;
+    private IMessage _message;
 
     public MessageDecorator(IMessage message)
     {
