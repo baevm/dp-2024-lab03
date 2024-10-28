@@ -1,10 +1,5 @@
 namespace MessageDecorator;
 
-public interface IMessage
-{
-    void Print();
-}
-
 public class Message : IMessage
 {
     private string Text;
@@ -17,5 +12,6 @@ public class Message : IMessage
     public virtual void Print()
     {
         Console.WriteLine(Text);
+        
     }
 }
