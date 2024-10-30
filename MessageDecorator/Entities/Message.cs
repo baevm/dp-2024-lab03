@@ -2,16 +2,15 @@ namespace MessageDecorator;
 
 public class Message : IMessage
 {
-    private string Text;
+    private string _text;
 
     public Message(string text)
     {
-        Text = text;
+        _text = text;
     }
 
-    public virtual void Print()
+    public void Print()
     {
-        Console.WriteLine(Text);
-        
+        Console.WriteLine(_text);
     }
 }

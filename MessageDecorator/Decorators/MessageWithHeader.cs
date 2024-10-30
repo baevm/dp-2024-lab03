@@ -1,5 +1,8 @@
 namespace MessageDecorator;
 
+/// <summary>
+/// Декоратор сообщений с заголовком
+/// </summary>
 public class MessageWithHeader : MessageDecorator
 {
     private readonly string _header;

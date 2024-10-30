@@ -2,9 +2,9 @@ namespace MessageDecorator;
 
 public abstract class MessageDecorator : IMessage
 {
-    private IMessage _message;
+    private readonly IMessage _message;
 
-    public MessageDecorator(IMessage message)
+    protected MessageDecorator(IMessage message)
     {
         _message = message;
     }
