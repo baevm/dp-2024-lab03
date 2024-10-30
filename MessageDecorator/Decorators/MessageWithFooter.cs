@@ -1,5 +1,9 @@
 namespace MessageDecorator;
 
+
+/// <summary>
+/// Декоратор сообщений с подписью
+/// </summary>
 public class MessageWithFooter : MessageDecorator
 {
     private readonly string _footer;

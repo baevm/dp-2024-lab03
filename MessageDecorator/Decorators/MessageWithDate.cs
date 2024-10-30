@@ -1,5 +1,9 @@
 namespace MessageDecorator;
 
+
+/// <summary>
+/// Декоратор сообщений с датой
+/// </summary>
 public class MessageWithDate : MessageDecorator
 {
     private readonly DateTime _date;
