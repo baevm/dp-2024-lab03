@@ -5,16 +5,12 @@ namespace MessageDecorator;
 /// </summary>
 public class MessageWithHeader : MessageDecorator
 {
-    private readonly string _header;
-
-    public MessageWithHeader(IMessage message, string header) : base(message)
+    public MessageWithHeader(Messager message, string header) : base(FormatMessage(message, header))
     {
-        _header = header;
     }
 
-    public override void Print()
+    private static string FormatMessage(Messager message, string header)
     {
-        Console.WriteLine(_header);
-        base.Print();
+        return $"{header}\n{message._text}";
     }
 }

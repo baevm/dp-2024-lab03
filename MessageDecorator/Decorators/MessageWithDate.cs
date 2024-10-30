@@ -6,16 +6,12 @@ namespace MessageDecorator;
 /// </summary>
 public class MessageWithDate : MessageDecorator
 {
-    private readonly DateTime _date;
-
-    public MessageWithDate(IMessage message, DateTime date) : base(message)
+    public MessageWithDate(Messager message, DateTime date) : base(FormatMessage(message, date))
     {
-        _date = date;
     }
 
-    public override void Print()
+    private static string FormatMessage(Messager message, DateTime date)
     {
-        base.Print();
-        Console.WriteLine(_date.ToString("dd.MM.yyyy"));
+        return $"{message._text}\n{date:dd.MM.yyyy}";
     }
 }

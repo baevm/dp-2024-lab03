@@ -1,16 +1,8 @@
 namespace MessageDecorator;
 
-public abstract class MessageDecorator : IMessage
+public abstract class MessageDecorator : Messager
 {
-    private readonly IMessage _message;
-
-    protected MessageDecorator(IMessage message)
+    protected MessageDecorator(string message) : base(message)
     {
-        _message = message;
-    }
-
-    public virtual void Print()
-    {
-        _message.Print();
     }
 }

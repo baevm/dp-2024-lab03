@@ -6,16 +6,12 @@ namespace MessageDecorator;
 /// </summary>
 public class MessageWithFooter : MessageDecorator
 {
-    private readonly string _footer;
-
-    public MessageWithFooter(IMessage message, string footerMessage) : base(message)
+    public MessageWithFooter(Messager message, string footerMessage) : base(FormatMessage(message, footerMessage))
     {
-        _footer = footerMessage;
     }
 
-    public override void Print()
+    private static string FormatMessage(Messager message, string footer)
     {
-        base.Print();
-        Console.WriteLine(_footer);
+        return $"{message._text}\n{footer}";
     }
 }
